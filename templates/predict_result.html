@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="glass-card mt-5 animate">
+  <h3 class="text-center text-warning"><i class="bi bi-bar-chart-line"></i> Prediction Results</h3>
+  <div class="table-responsive mt-4 text-dark bg-light rounded p-3">
+    {% for table in tables %}
+      {{ table|safe }}
+    {% endfor %}
+  </div>
+  <div class="text-center mt-4">
+    <a href="{{ download_link }}" class="btn btn-outline-info btn-lg" download>
+      <i class="bi bi-download"></i> Download Full Results
+    </a>
+  </div>
+</div>
+{% endblock %}

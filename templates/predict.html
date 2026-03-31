@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-md-6 mx-auto glass-card mt-5 animate">
+  <h3 class="text-center text-info mb-4">Upload Dataset for Prediction</h3>
+
+  <form method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label class="form-label text-light">Select a CSV File:</label>
+      <input type="file" name="dataset" accept=".csv" class="form-control" required>
+      <small class="text-secondary">Upload a valid CSV dataset (e.g., patient notes or reports)</small>
+    </div>
+
+    <button class="btn btn-info w-100 mt-3">Run Prediction</button>
+  </form>
+</div>
+{% endblock %}

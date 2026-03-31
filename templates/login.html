@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-md-5 mx-auto glass-card mt-5 animate">
+  <h3 class="text-center text-info mb-4"><i class="bi bi-box-arrow-in-right"></i> User Login</h3>
+  <form method="POST">
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" name="username" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" required>
+    </div>
+    <button class="btn btn-info w-100">Login</button>
+  </form>
+  <p class="text-center mt-3">Don’t have an account? 
+    <a href="{{ url_for('signup') }}" class="text-light fw-bold">Sign up</a>
+  </p>
+</div>
+{% endblock %}
